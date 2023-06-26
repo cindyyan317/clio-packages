@@ -35,6 +35,7 @@ ExternalProject_Add(${CLIO_PROJECT_NAME}
     CMAKE_ARGS
         -DPACKAGING=1
         -DCMAKE_BUILD_TYPE=Release
+        -DCMAKE_TOOLCHAIN_FILE:FILEPATH=build/generators/conan_toolchain.cmake
     BUILD_COMMAND cmake --build . --parallel $(nproc)
     INSTALL_COMMAND ""
 )
